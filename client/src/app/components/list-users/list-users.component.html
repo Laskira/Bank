@@ -1,0 +1,55 @@
+<navbar></navbar>
+<div class="card">
+  <p-table
+    [value]="users"
+    [paginator]="true"
+    [rows]="rows"
+    [showCurrentPageReport]="true"
+    styleClass="p-datatable-gridlines"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Correo</th>
+        <th>Nombre</th>
+        <th>Fecha de nacimiento</th>
+        <th>Sexo</th>
+        <th>Opciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td>{{ user.Correo }}</td>
+        <td>{{ user.Nombre }}</td>
+        <td>{{ user.FechaNacimiento }}</td>
+        <td>{{ user.Sexo }}</td>
+        <td>
+          <p-button
+            icon="pi pi-check"
+            styleClass="p-button-warning"
+            (click)="editUser(user.Correo)"
+          ></p-button>
+          <p-button
+            icon="pi pi-trash"
+            styleClass="p-button-danger"
+            class="align"
+            (click)="deleteUser(user.Correo)"
+          ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+      <p-button
+        type="button"
+        icon="pi pi-plus"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button
+        type="button"
+        icon="pi pi-cloud"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template>
+  </p-table>
+</div>

@@ -1,0 +1,70 @@
+<h1 class="title">{{title}}</h1>
+
+
+<div class="container">
+  <div class="form-container">
+    <form [formGroup]="FormUsuario" (ngSubmit)="Submit()">
+      <div class="input-container">
+        <label htmlFor="correo">Correo electrónico</label>
+        <input
+          pInputText
+          id="correo"
+          aria-describedby="correo-help"
+          formControlName="Correo"
+        />
+      </div>
+      <div class="input-container">
+        <label htmlFor="contrasenia">Contraseña</label>
+        <p-password
+          formControlName="Contrasenia"
+          [toggleMask]="true"
+          id="contrasenia"
+        ></p-password>
+      </div>
+  
+      <div class="input-container">
+        <label htmlFor="nombre">Nombre</label>
+        <input
+          pInputText
+          id="nombre"
+          aria-describedby="nombre-help"
+          formControlName="Nombre"
+        />
+      </div>
+  
+      <div class="input-container">
+        <label htmlFor="sexo">Sexo</label>
+        <input
+          pInputText
+          id="sexo"
+          aria-describedby="sexo-help"
+          formControlName="Sexo"
+        />
+      </div>
+  
+      <div class="input-container">
+        <label htmlFor="fechanacimiento">Fecha de nacimiento</label>
+        <p-calendar
+          formControlName="FechaNacimiento"
+          [showIcon]="true"
+        ></p-calendar>
+      </div>
+  
+      <p-toast></p-toast>
+     <div class="form-button">
+      <button
+      type="submit"
+      pButton
+      pRipple
+      label="{{title}} usuario"
+      class="p-button-success"
+    ></button>
+     </div>
+    </form>
+  </div>
+
+  
+  <span class="sesion">
+    <a routerLink="/">{{title}} usuario</a>
+  </span>
+</div>

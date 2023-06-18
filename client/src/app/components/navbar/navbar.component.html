@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="card flex justify-content-center">
+        <button
+          type="button"
+          pButton
+          icon="pi pi-bars"
+          (click)="menu.toggle($event)"
+          styleClass="p-button-text"
+        ></button>
+        <p-slideMenu
+          #menu
+          [model]="items"
+          [popup]="true"
+          [viewportHeight]="250"
+          [menuWidth]="175"
+        ></p-slideMenu>
+      </div>
+  <div class="title-container"><h2 class="title">Bank App</h2></div>
+</nav>

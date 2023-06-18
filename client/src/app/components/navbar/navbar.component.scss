@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100vw;
+  background: #232323;
+}
+
+.title-container {
+  margin-left: 12px;
+
+  .title{
+    color: #ffff;
+  }
+}

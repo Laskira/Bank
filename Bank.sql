@@ -64,7 +64,7 @@ AS BEGIN
 	INNER JOIN dbo.Usuarios U ON U.Correo = T.Correo;
 END
 
--- INSERSIÓN DE DATOS DE PRUEBA
+-- INSERSIÃ“N DE DATOS DE PRUEBA
 
 DECLARE @jsonData1 VARCHAR(MAX) = '
 {
@@ -168,7 +168,6 @@ DECLARE @jsonData11 VARCHAR(MAX) = '
 }';
 
 
--- Execute the stored procedure with JSON data
 EXEC SPGuardarUsuario @jsonData = @jsonData1;
 EXEC SPGuardarUsuario @jsonData = @jsonData2;
 EXEC SPGuardarUsuario @jsonData = @jsonData3;
